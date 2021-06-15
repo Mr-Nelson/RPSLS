@@ -1,9 +1,9 @@
+import random
 from player import Player
 
-
 class Artificial_Intelligence(Player):
-    def __init__(self):
+    def __init__(self, name):
         super().__init__()
 
     def chose_gesture(self):
-        pass
+        ai_gesture = random.choices()

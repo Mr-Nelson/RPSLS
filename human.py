@@ -1,9 +1,8 @@
 from player import Player
 
-
 class Human(Player):
-    def __init__(self):
+    def __init__(self, name):
         super().__init__()
 
     def chose_gesture(self):
-        pass
+        human_choice = input("Choose your gesture.")

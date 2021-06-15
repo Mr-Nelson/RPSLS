@@ -4,4 +4,5 @@ class Player:
         self.chose_gesture = ""
 
     def chose_gesture(self):
-        pass
+        gestures_index = 1
+        gestures = ("rock", "paper", "scissors", "lizard", "spock")
