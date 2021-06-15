@@ -5,6 +5,8 @@ class Center_Stage:
     def __init__(self):
         self.player_one = Human("name")
         self.player_two = None
+        self.player_one_chosen = None
+        self.player_two_chosen = None
         self.player_one_score = 0
         self.player_two_score = 0
 
@@ -32,19 +34,24 @@ class Center_Stage:
 
     def player_one_choice(self):
         self.player_one.choose_gesture()
+        self.player_one_chosen = int()
 
     def player_two_choice(self):
         if self.player_two == Human(""):
             self.player_two.choose_gesture()
+            self.player_two_chosen = int()
         else:
             self.player_two.choose_gesture()
+            self.player_two_chosen = int()
+
 
     def showdown(self):
-        "rock" > "scissors" and "rock" > "lizard"
-        "scissors" > "paper" and "scissors" > "lizard"
-        "paper" > "rock" and "paper" > "spock"
-        "lizard" > "spock" and "lizard" > "paper"
-        "spock" > "scissors" and "spock" > "rock"
+        # integers
+        self.player.gestures[0] > self.player.gestures[2] and self.player.gestures[0] > self.player.gestures[3]
+        self.player.gestures[2] > self.player.gestures[1] and self.player.gestures[2] > self.player.gestures[3]
+        self.player.gestures[1] > self.player.gestures[0] and self.player.gestures[1] > self.player.gestures[4]
+        self.player.gestures[3] > self.player.gestures[4] and self.player.gestures[3] > self.player.gestures[1]
+        self.player.gestures[4] > self.player.gestures[2] and self.player.gestures[4] > self.player.gestures[0]
         while self.player_one_score < 2 and self.player_two_score < 2:
             if self.player_one_choice() > self.player_two_choice():
                 self.player_one_score += 1
