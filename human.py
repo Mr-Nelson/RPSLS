@@ -5,7 +5,8 @@ class Human(Player):
         super().__init__(name)
 
     def choose_gesture(self):
-        gesture_index = 1
-        print("Choose {gesture_index} for {self.gestures}.")
-        gesture_index += 1
+        gesture_index = 0
+        for gesture in self.gestures:
+            print(f"Choose {gesture_index} for {gesture}.")
+            gesture_index += 1
         human_choice = input("Choose your gesture.")

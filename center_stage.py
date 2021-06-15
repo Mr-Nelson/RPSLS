@@ -37,7 +37,7 @@ class Center_Stage:
         if self.player_two == Human(""):
             self.player_two.choose_gesture()
         else:
-            self.Artificial_Intelligence.choose_gesture()
+            self.player_two.choose_gesture()
 
     def showdown(self):
         "rock" > "scissors" and "rock" > "lizard"
