@@ -7,9 +7,14 @@ class Center_Stage:
         self.player_two = None
 
     def run_game(self):
-        # Intro
-        # Display Welcome
-        # Instructions
+
+        print("Welcome to Rock, Paper, Scissors, Lizard, Spock!")
+
+        print("Instructions:")
+        print("1.Choose how many players.")
+        print("2.Enter your name(s).")
+        print("3.Select a gesture.")
+        print("4.Winner is best of three!")
 
         self.choose_game_mode()
         self.showdown()
@@ -34,12 +39,12 @@ class Center_Stage:
                 self.player_two_choice()
                 if self.player_one.chosen_gesture > self.player_two.chosen_gesture:
                     self.player_one.score += 1
-                    print(f"{self.player_one.name} won with {self.player_one.chosen_gesture}!")
+                    print(f"{self.player_one.name} won with {self.player_one.gesture_name}!")
                     print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
                     self.showdown()
                 if self.player_one.chosen_gesture < self.player_two.chosen_gesture:
                     self.player_two.score += 1
-                    print(f"{self.player_two.name} won with {self.player_two.chosen_gesture}!")
+                    print(f"{self.player_two.name} won with {self.player_two.gesture_name}!")
                     print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
                     self.showdown()
                 if self.player_one.chosen_gesture == self.player_two.chosen_gesture:
@@ -51,15 +56,15 @@ class Center_Stage:
         if self.player_one.chosen_gesture > 4:
             print("Sorry, choose zero through four.")
             self.player_one_choice()
-        print(f"{self.player_one.name} chooses {self.player_one.chosen_gesture}.")
+        print(f"{self.player_one.name} chooses {self.player_one.gesture_name}.")
 
     def player_two_choice(self):
         if self.player_two == Human(""):
             self.player_two.choose_gesture()
-            print(f"{self.player_two.name} chooses {self.player_two.chosen_gesture}.")
+            print(f"{self.player_two.name} chooses {self.player_two.gesture_name}.")
         else:
             self.player_two.choose_gesture()
-            print(f"{self.player_two.name} chooses {self.player_two.chosen_gesture}.")
+            print(f"{self.player_two.name} chooses {self.player_two.gesture_name}.")
 
     def display_winner(self):
         if self.player_one.score == 2:

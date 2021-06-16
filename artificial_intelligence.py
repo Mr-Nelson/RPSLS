@@ -9,3 +9,4 @@ class Artificial_Intelligence(Player):
     def choose_gesture(self):
         ai_input = random.choice(self.gestures)
         self.chosen_gesture = int(ai_input)
+        self.get_name()

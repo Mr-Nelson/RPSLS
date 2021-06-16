@@ -11,3 +11,4 @@ class Human(Player):
             gesture_index += 1
         human_input = input("Choose your gesture.")
         self.chosen_gesture = int(human_input)
+        self.get_name()
