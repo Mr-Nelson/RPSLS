@@ -9,5 +9,5 @@ class Human(Player):
         for gesture in self.gestures:
             print(f"Choose {gesture_index} for {gesture}.")
             gesture_index += 1
-        input("Choose your gesture.")
-        return self.chosen_gesture
+        human_input = input("Choose your gesture.")
+        self.chosen_gesture = int(human_input)
