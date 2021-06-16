@@ -44,10 +44,8 @@ class Center_Stage:
                     self.showdown()
                 if self.player_one.chosen_gesture == self.player_two.chosen_gesture:
                     print("It was a tie!")
-                    self.player_one_choice()
-                    self.player_two_choice()
                     self.showdown()
-
+            break
     def player_one_choice(self):
         self.player_one.choose_gesture()
         if self.player_one.chosen_gesture > 4:
