@@ -4,4 +4,4 @@ class Player:
         self.gestures = ["rock", "paper", "scissors", "lizard", "spock"]
         self.chosen_gesture = ""
     def choose_gesture(self):
-        print("This method is overridden.")
+        return self.chosen_gesture

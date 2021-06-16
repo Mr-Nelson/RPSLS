@@ -5,10 +5,6 @@ class Center_Stage:
     def __init__(self):
         self.player_one = Human("name")
         self.player_two = None
-        self.player_one_chosen = None
-        self.player_two_chosen = None
-        self.player_one_score = 0
-        self.player_two_score = 0
 
     def run_game(self):
         # Intro
@@ -34,15 +30,17 @@ class Center_Stage:
 
     def player_one_choice(self):
         self.player_one.choose_gesture()
-        self.player_one_chosen = int()
-
+        self.player_one.chosen = int()
+        if self.player_one.chosen > 4:
+            print("Sorry, choose zero through four.")
+            self.player_one_choice()
     def player_two_choice(self):
         if self.player_two == Human(""):
             self.player_two.choose_gesture()
-            self.player_two_chosen = int()
+            self.player_two.chosen = int()
         else:
             self.player_two.choose_gesture()
-            self.player_two_chosen = int()
+            self.player_two.chosen = int()
 
 
     def showdown(self):
@@ -54,12 +52,12 @@ class Center_Stage:
         self.player.gestures[4] > self.player.gestures[2] and self.player.gestures[4] > self.player.gestures[0]
         while self.player_one_score < 2 and self.player_two_score < 2:
             if self.player_one_choice() > self.player_two_choice():
-                self.player_one_score += 1
+                self.player_one.score += 1
             if self.player_one_choice() < self.player_two_choice():
-                self.player_two_score += 1
+                self.player_two.score += 1
 
     def display_winner(self):
-        if self.player_one_score == 2:
+        if self.player_one.score == 2:
             print(f"{self.player_one.name} has won!")
-        if self.player_two_score == 2:
+        if self.player_two.score == 2:
             print(f"{self.player_two.name} has won!")
