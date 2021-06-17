@@ -6,6 +6,6 @@ class Gestures:
     def get_gesture_names(self):
         return self.gesture_names
 
-    def get_heirarchy(self):
+    def get_hierarchy(self):
         if "subclass_one" > "subclass_two":
             pass

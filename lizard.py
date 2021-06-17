@@ -4,6 +4,6 @@ class Lizard(Gestures):
     def __init__(self):
         super().__init__()
 
-    def get_heirarchy(self):
+    def get_hierarchy(self):
         "lizard".__gt__("Spock")
         "lizard".__gt__("paper")
