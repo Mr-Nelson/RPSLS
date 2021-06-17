@@ -6,5 +6,5 @@ class Scissors(Gestures):
         super().__int__()
 
     def get_heirarchy(self):
-        "scissors".__lt--("paper")
-        "scissors".__lt__("lizard")
+        "scissors".__gt--("paper")
+        "scissors".__gt__("lizard")

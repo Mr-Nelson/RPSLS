@@ -6,6 +6,6 @@ class Rock(Gestures):
         super().__int__()
 
     def get_heirarchy(self):
-        "rock".__lt__("scissors")
-        "rock".__lt__("lizard")
+        "rock".__gt__("scissors")
+        "rock".__gt__("lizard")
 
