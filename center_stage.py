@@ -10,6 +10,11 @@ class CenterStage:
     def __init__(self):
         self.player_one = Human("name")
         self.player_two = None
+        Rock.get_heirarchy(self)
+        Scissors.get_heirarchy(self)
+        Paper.get_heirarchy(self)
+        Lizard.get_heirarchy(self)
+        Spock.get_heirarchy(self)
 
     def run_game(self):
 
@@ -40,12 +45,12 @@ class CenterStage:
         while self.player_one.score < 2 and self.player_two.score < 2:
             self.player_one_choice()
             self.player_two_choice()
-            if self.player_one.chosen_gesture > self.player_two.chosen_gesture:
+            if self.player_one.chosen_gesture.__gt__(self.player_two.chosen_gesture):
                 self.player_one.score += 1
                 print(f"{self.player_one.name} won with {self.player_one.chosen_gesture}!")
                 print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
                 self.showdown()
-            if self.player_one.chosen_gesture < self.player_two.chosen_gesture:
+            if self.player_one.chosen_gesture.__lt__(self.player_two.chosen_gesture):
                 self.player_two.score += 1
                 print(f"{self.player_two.name} won with {self.player_two.chosen_gesture}!")
                 print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
