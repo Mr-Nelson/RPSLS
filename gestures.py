@@ -10,9 +10,6 @@ class Gestures:
         self.player_two = Human("name") or ArtificialIntelligence()
         self.player_two.score = 0
 
-    def get_gesture_names(self):
-        return self.gesture_names
-
     def get_hierarchy(self):
         if self.player_one == self.gesture_names and self.player_two == self.gesture_names:
             self.player_one.score +=1
