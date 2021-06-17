@@ -5,7 +5,5 @@ class Spock(Gestures):
         super().__init__()
 
     def get_heirarchy(self):
-        if "Spock" > "scissors":
-            pass
-        if "Spock" > "rock":
-            pass
+        "Spock".__lt__("scissors")
+        "Spock".__lt__("rock")

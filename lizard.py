@@ -5,7 +5,5 @@ class Lizard(Gestures):
         super().__init__()
 
     def get_heirarchy(self):
-        if "lizard" > "Spock":
-            pass
-        if "lizard" > "paper":
-            pass
+        "lizard".__lt__("Spock")
+        "lizard".__lt__("paper")

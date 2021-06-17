@@ -5,7 +5,5 @@ class Paper(Gestures):
         super().__init__()
 
     def get_heirarchy(self):
-        if "paper" > "rock":
-            pass
-        if "paper" > "Spock":
-            pass
+        "paper".__lt__("rock")
+        "paper".__init__("Spock")

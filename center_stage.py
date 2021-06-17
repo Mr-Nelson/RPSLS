@@ -37,23 +37,22 @@ class CenterStage:
             self.player_two = ArtificialIntelligence("Chappie")
 
     def showdown(self):
-        # choices switched to integers [rock=0, paper=1, scissors=2, lizard=3, spock=4]
-            while self.player_one.score < 2 and self.player_two.score < 2:
-                self.player_one_choice()
-                self.player_two_choice()
-                if self.player_one.chosen_gesture > self.player_two.chosen_gesture:
-                    self.player_one.score += 1
-                    print(f"{self.player_one.name} won with {self.player_one.chosen_gesture}!")
-                    print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
-                    self.showdown()
-                if self.player_one.chosen_gesture < self.player_two.chosen_gesture:
-                    self.player_two.score += 1
-                    print(f"{self.player_two.name} won with {self.player_two.chosen_gesture}!")
-                    print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
-                    self.showdown()
-                if self.player_one.chosen_gesture == self.player_two.chosen_gesture:
-                    print("It was a tie!")
-                    self.showdown()
+        while self.player_one.score < 2 and self.player_two.score < 2:
+            self.player_one_choice()
+            self.player_two_choice()
+            if self.player_one.chosen_gesture > self.player_two.chosen_gesture:
+                self.player_one.score += 1
+                print(f"{self.player_one.name} won with {self.player_one.chosen_gesture}!")
+                print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
+                self.showdown()
+            if self.player_one.chosen_gesture < self.player_two.chosen_gesture:
+                self.player_two.score += 1
+                print(f"{self.player_two.name} won with {self.player_two.chosen_gesture}!")
+                print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
+                self.showdown()
+            if self.player_one.chosen_gesture == self.player_two.chosen_gesture:
+                print("It was a tie!")
+                self.showdown()
 
     def player_one_choice(self):
         self.player_one.choose_gesture()
