@@ -1,5 +1,5 @@
-from center_stage import Center_Stage
+from center_stage import CenterStage
 
-center_stage = Center_Stage()
+center_stage = CenterStage()
 center_stage.run_game()
 
