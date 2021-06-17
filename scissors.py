@@ -1,6 +1,5 @@
 from gestures import Gestures
 
-
 class Scissors(Gestures):
     def __init__(self):
         super().__init__()
@@ -22,5 +21,3 @@ class Scissors(Gestures):
             player_two.score +=1
             print(f"{player_two.name} won with {player_two.chosen_gesture}!")
             print(f"{player_one.name}:{player_one.score} {player_two.name}:{player_two.score}")
-        "scissors".__gt__("paper")
-        "scissors".__gt__("lizard")

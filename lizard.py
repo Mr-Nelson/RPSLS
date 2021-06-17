@@ -21,5 +21,3 @@ class Lizard(Gestures):
             player_two.score +=1
             print(f"{player_two.name} won with {player_two.chosen_gesture}!")
             print(f"{player_one.name}:{player_one.score} {player_two.name}:{player_two.score}")
-        "lizard".__gt__("Spock")
-        "lizard".__gt__("paper")

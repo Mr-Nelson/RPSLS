@@ -1,7 +1,6 @@
 from human import Human
 from artificial_intelligence import ArtificialIntelligence
 
-
 class Gestures:
 
     def __init__(self):
@@ -17,5 +16,3 @@ class Gestures:
     def get_hierarchy(self):
         if self.player_one == self.gesture_names and self.player_two == self.gesture_names:
             self.player_one.score +=1
-        if "subclass_one" > "subclass_two":
-            pass

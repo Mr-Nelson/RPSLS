@@ -58,18 +58,6 @@ class CenterStage:
             elif self.player_one.chosen_gesture == self.player_two.chosen_gesture:
                 print("It was a tie!")
                 self.showdown()
-            # if self.player_one.chosen_gesture.__gt__(self.player_two.chosen_gesture):
-            #     self.player_one.score += 1
-            #     print(f"{self.player_one.name} won with {self.player_one.chosen_gesture}!")
-            #     print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
-            #     self.showdown()
-            # if self.player_one.chosen_gesture.__lt__(self.player_two.chosen_gesture):
-            #     self.player_two.score += 1
-            #     print(f"{self.player_two.name} won with {self.player_two.chosen_gesture}!")
-            #     print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
-            #     self.showdown()
-            # if self.player_one.chosen_gesture.__eq__(self.player_two.chosen_gesture):
-
 
     def player_one_choice(self):
         self.player_one.choose_gesture()

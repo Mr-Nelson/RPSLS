@@ -5,9 +5,6 @@ class Player:
         self.chosen_gesture = ""
         self.score = 0
 
-
-
-
     def choose_gesture(self):
 
         gesture_index = 0
