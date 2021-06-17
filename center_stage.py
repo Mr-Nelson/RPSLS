@@ -55,7 +55,7 @@ class CenterStage:
                 self.showdown()
             elif self.spock.get_hierarchy(self.player_one, self.player_two):
                 self.showdown()
-            else:
+            elif self.player_one.chosen_gesture == self.player_two.chosen_gesture:
                 print("It was a tie!")
                 self.showdown()
             # if self.player_one.chosen_gesture.__gt__(self.player_two.chosen_gesture):
