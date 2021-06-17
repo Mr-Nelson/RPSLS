@@ -5,22 +5,16 @@ from scissors import Scissors
 from paper import Paper
 from lizard import Lizard
 from spock import Spock
-from gestures import Gestures
 
 class CenterStage:
     def __init__(self):
         self.player_one = Human("name")
         self.player_two = None
         self.rock = Rock()
-        self.rock.get_hierarchy()
         self.scissors = Scissors()
-        self.scissors.get_hierarchy()
         self.paper = Paper()
-        self.paper.get_hierarchy()
         self.lizard = Lizard()
-        self.lizard.get_hierarchy()
         self.spock = Spock()
-        self.spock.get_hierarchy()
 
     def run_game(self):
 
@@ -51,19 +45,31 @@ class CenterStage:
         while self.player_one.score < 2 and self.player_two.score < 2:
             self.player_one_choice()
             self.player_two_choice()
-            if self.player_one.chosen_gesture.__gt__(self.player_two.chosen_gesture):
-                self.player_one.score += 1
-                print(f"{self.player_one.name} won with {self.player_one.chosen_gesture}!")
-                print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
+            if self.rock.get_hierarchy(self.player_one, self.player_two):
                 self.showdown()
-            if self.player_one.chosen_gesture.__lt__(self.player_two.chosen_gesture):
-                self.player_two.score += 1
-                print(f"{self.player_two.name} won with {self.player_two.chosen_gesture}!")
-                print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
+            elif self.scissors.get_hierarchy(self.player_one, self.player_two):
                 self.showdown()
-            if self.player_one.chosen_gesture.__eq__(self.player_two.chosen_gesture):
+            elif self.paper.get_hierarchy(self.player_one, self.player_two):
+                self.showdown()
+            elif self.lizard.get_hierarchy(self.player_one, self.player_two):
+                self.showdown()
+            elif self.spock.get_hierarchy(self.player_one, self.player_two):
+                self.showdown()
+            else:
                 print("It was a tie!")
                 self.showdown()
+            # if self.player_one.chosen_gesture.__gt__(self.player_two.chosen_gesture):
+            #     self.player_one.score += 1
+            #     print(f"{self.player_one.name} won with {self.player_one.chosen_gesture}!")
+            #     print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
+            #     self.showdown()
+            # if self.player_one.chosen_gesture.__lt__(self.player_two.chosen_gesture):
+            #     self.player_two.score += 1
+            #     print(f"{self.player_two.name} won with {self.player_two.chosen_gesture}!")
+            #     print(f"{self.player_one.name}:{self.player_one.score} {self.player_two.name}:{self.player_two.score}")
+            #     self.showdown()
+            # if self.player_one.chosen_gesture.__eq__(self.player_two.chosen_gesture):
+
 
     def player_one_choice(self):
         self.player_one.choose_gesture()
