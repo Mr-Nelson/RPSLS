@@ -5,21 +5,22 @@ from scissors import Scissors
 from paper import Paper
 from lizard import Lizard
 from spock import Spock
+from gestures import Gestures
 
 class CenterStage:
     def __init__(self):
         self.player_one = Human("name")
         self.player_two = None
-        self.player_one.chosen_gesture = Rock()
-        self.player_one.chosen_gesture.get_hierarchy()
-        self.player_one.chosen_gesture = Scissors()
-        self.player_one.chosen_gesture.get_hierarchy()
-        self.player_one.chosen_gesture = Paper()
-        self.player_one.chosen_gesture.get_hierarchy()
-        self.player_one.chosen_gesture = Lizard()
-        self.player_one.chosen_gesture.get_hierarchy()
-        self.player_one.chosen_gesture = Spock()
-        self.player_one.chosen_gesture.get_hierarchy()
+        self.rock = Rock()
+        self.rock.get_hierarchy()
+        self.scissors = Scissors()
+        self.scissors.get_hierarchy()
+        self.paper = Paper()
+        self.paper.get_hierarchy()
+        self.lizard = Lizard()
+        self.lizard.get_hierarchy()
+        self.spock = Spock()
+        self.spock.get_hierarchy()
 
     def run_game(self):
 
