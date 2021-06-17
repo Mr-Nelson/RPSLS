@@ -3,7 +3,7 @@ from gestures import Gestures
 
 class Rock(Gestures):
     def __init__(self):
-        super().__int__()
+        super().__init__()
 
     def get_hierarchy(self):
         "rock".__gt__("scissors")

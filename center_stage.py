@@ -10,11 +10,16 @@ class CenterStage:
     def __init__(self):
         self.player_one = Human("name")
         self.player_two = None
-        Rock.get_hierarchy(self)
-        Scissors.get_hierarchy(self)
-        Paper.get_hierarchy(self)
-        Lizard.get_hierarchy(self)
-        Spock.get_hierarchy(self)
+        self.player_one.chosen_gesture = Rock()
+        self.player_one.chosen_gesture.get_hierarchy()
+        self.player_one.chosen_gesture = Scissors()
+        self.player_one.chosen_gesture.get_hierarchy()
+        self.player_one.chosen_gesture = Paper()
+        self.player_one.chosen_gesture.get_hierarchy()
+        self.player_one.chosen_gesture = Lizard()
+        self.player_one.chosen_gesture.get_hierarchy()
+        self.player_one.chosen_gesture = Spock()
+        self.player_one.chosen_gesture.get_hierarchy()
 
     def run_game(self):
 
